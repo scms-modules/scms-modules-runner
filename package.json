@@ -1,6 +1,6 @@
 {
   "name": "scmsmodules-runner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "scmsmodules runner",
   "main": "index.js",
   "repository": "https://github.com/scms-modules/scms-modules-runner.git",
