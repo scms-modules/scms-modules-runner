@@ -1,0 +1,60 @@
+<div ng-controller="compileCtrl" class="derective-module">
+    
+    <div id="contentSidebar">
+        <h2>指令名称：{{item.name}} </i></h2>
+        <h4>{{item.date}} <i>作者-{{item.author}}</i><i ng-if="item.lastBy">；修改-{{item.lastBy}}</i></h4>
+        <h3><span>指令描述：</span>{{item.description}}</h3>
+        <h3><span>外部JS依赖：</span>{{item.deps[0]}}</h3>
+        <h3><span>外部HTML插入：</span><pre class="code" ng-bind="item.htmlCode"></pre></h3>
+        <h3 ng-show="item.scope && item.scope.length"><span>scope属性:</span></h3>
+        <table class="table table-bordered" ng-show="item.scope && item.scope.length">
+            <tbody>
+                <tr>
+                    <th>属性名称</th>
+                    <th>继承</th>
+                    <th>值类型</th>
+                    <th>描述</th>
+                </tr>
+                <tr ng-repeat="scope in item.scope">
+                    <td><span style="white-space:nowrap">{{scope.key}}</span></td>
+                    <td><span style="white-space:nowrap">{{scope.scopeType || '='}}</span></td>
+                    <td><span style="white-space:nowrap">{{scope.type}}</span></td>
+                    <td>{{scope.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 ng-show="item.attrs && item.attrs.length"><span>attrs属性:</span></h3>
+        <table class="table table-bordered" ng-show="item.attrs && item.attrs.length">
+            <tbody>
+                <tr>
+                    <th>属性名称</th>
+                    <th>值类型</th>
+                    <th>默认值</th>
+                    <th>描述</th>
+                </tr>
+                <tr ng-repeat="scope in item.attrs">
+                    <td><span style="white-space:nowrap" ng-bind="scope.key"></span></td>
+                    <td><span style="white-space:nowrap" ng-bind="scope.type"></span></td>
+                    <td>{{scope.defaultValue}}<span ng-if="!scope.defaultValue">-</span></td>
+                    <td>{{scope.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 ng-show="item.api && item.api.length"><span>JS内部api依赖：</span></h3>
+        <table class="table table-bordered" ng-show="item.api && item.api.length">
+            <tbody>
+                <tr ng-repeat="scope in item.api">
+                    <td>{{scope}}</td>
+                <tr>
+            </tbody>
+        </table>
+
+        <h3 ng-show="item.scope && item.scope.length"><span>scope连动视图：</span></h3>
+        <table class="table table-bordered">
+            <tbody class="tbodyContent" data-ng-bind-html="item.view">
+            </tbody>
+        </table>
+    </div>
+    <div class="contentHtml" data-ng-bind-html="item.html"></div>
+</div>

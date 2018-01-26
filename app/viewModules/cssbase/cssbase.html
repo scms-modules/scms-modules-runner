@@ -1,0 +1,4 @@
+<div ng-controller="cssCtrl">
+    <div css-base-directive curr-item="currItem" ng-if="currItem.type !== 'directive'"></div>
+    <div component-view-directive curr-item="currItem" ng-if="currItem.type === 'directive'"></div>
+</div>

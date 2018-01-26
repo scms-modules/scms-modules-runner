@@ -1,0 +1,140 @@
+{
+	"data": [
+		{
+			"title": "base",
+			"htmlUrl": "/view/viewModules/css/html/base.html",
+			"isCode": false
+		},
+		{
+			"title": "FontAwesome",
+			"htmlUrl": "/view/viewModules/css/html/FontAwesome.html",
+			"isCode": false
+		},
+		{
+			"title": "buttons",
+			"html": [
+				"<button type=\"button\" class=\"btn btn-default\">Default</button>", 
+				"<button type=\"button\" class=\"btn btn-primary\">Primary</button>", 
+				"<button type=\"button\" class=\"btn btn-success\">Success</button>", 
+				"<button type=\"button\" class=\"btn btn-info\">Info</button>", 
+				"<button type=\"button\" class=\"btn btn-warning\">Warning</button>",
+				"<button type=\"button\" class=\"btn btn-danger\">Danger</button>",
+				"<button type=\"button\" class=\"btn btn-link\">Link</button>"
+			]
+		},
+		{
+			"title": "nav-tabs",
+			"htmlUrl": "/view/viewModules/css/html/nav-tabs.html"
+		},
+		{
+			"title": "nav-pills",
+			"htmlUrl": "/view/viewModules/css/html/nav-pills.html"
+		},
+		{
+			"title": "search-form",
+			"htmlUrl": "/view/viewModules/css/html/search_form.html",
+			"depict": ""
+		},
+		{
+			"title": "panel-group",
+			"htmlUrl": "/view/viewModules/css/html/pannel-group.html",
+			"depict": "",
+			"style": "background:#bfe0e0;"
+		},
+		{
+			"title": "panel-detail",
+			"htmlUrl": "/view/viewModules/css/html/pannel-detail.html",
+			"depict": ""
+		},
+		{
+			"title": "tablebox",
+			"htmlUrl": "/view/viewModules/css/html/table.html",
+			"depict": "在小屏中，table的宽度为1000px，可左右滚动"
+		},
+		{
+			"title": "form",
+			"htmlUrl": "/view/viewModules/css/html/form.html"
+		},
+		{
+			"title": "form-y",
+			"htmlUrl": "/view/viewModules/css/html/form-y.html"
+		},
+		{
+			"title": "switch",
+			"htmlUrl": "/view/viewModules/css/html/switch.html"
+		},
+		{
+			"title": "dialog",
+			"htmlUrl": "/view/viewModules/css/html/dialog.html"
+		},
+		{
+			"title": "error-no-data",
+			"html": ["<div class='error-no-data'><span>暂无待审核数据</span></div>"]
+		},
+		{
+			"title": "alert",
+			"buttons": [
+				{
+					"value": "成功提示",
+					"callback": "$.alert('成功提示', {type:'success'});"
+				},
+				{
+					"value": "错误提示",
+					"callback": "$.alert('错误提示', {type:'error'});"
+				},
+				{
+					"value": "确定提示",
+					"callback": "$.alert('是否确定删除此记录？', {type:'confirm', callback:function() {console.log('执行：确认提示回调函数')}});"
+				},
+				{
+					"value": "确定提示有title",
+					"callback": "$.alert('是否确定删除此记录？', {type:'confirm', title:'确认提示',callback:function() {console.log('执行：确认提示回调函数')}});"
+				},
+				{
+					"value": "确定提示有title手动关闭",
+					"callback": "$.alert('是否确定删除此记录？', {type:'confirm', title:'确认提示',callbackManual:function(cb) {setTimeout(function(){ cb.closeFun(); }, 1000);}});"
+				},
+				{
+					"value": "确定提示有title手动关闭，失败提示",
+					"callback": "$.alert('是否确定删除此记录？', {type:'confirm', title:'确认提示',callbackManual:function(cb) {setTimeout(function(){ cb.msgFun('处理失败'); }, 1000);}});"
+				}
+			]
+			
+		},
+		{
+			"title":"loading",
+			"boxId":"loadingId",
+			"buttons": [
+				{
+					"value": "显示",
+					"callback": "$.loading(true);\nsetTimeout(function() {$.loading(false);}, 3000)"
+				},
+				{
+					"value": "在规定区域显示",
+					"callback": "$.loading(true, {$container: $('#loadingId')});\nsetTimeout(function() {$.loading(false, {$container: $('#loadingId')});}, 3000);"
+				}
+			]
+		},
+		{
+			"title":"localstorage",
+			"buttons": [
+				{
+					"value": "插入",
+					"callback": "G.setLocals({a:1});"
+				},
+				{
+					"value": "读取",
+					"callback": "var data = G.getLocals(['a']);\nconsole.log(data)"
+				},
+				{
+					"value": "删除",
+					"callback": "G.removeLocals(['a']);"
+				}
+			]
+		},
+		{
+			"title":"progress",
+			"htmlUrl": "/viewModules/css/html/progress.html"
+		}
+	]
+}

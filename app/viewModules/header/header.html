@@ -1,0 +1,30 @@
+<div ng-controller="headerCtrl">
+    <div class="container header-ctrl">
+        <div class="logo fl visible-large">
+            <a href="/" >
+                ScmsModules
+            </a>
+        </div>
+        <ul class="nav-menu fl">
+            <li>
+                <a href="#/cssbase/cssbase" ng-class="{active: currentState === 'cssbase.cssbase'}">
+                    Component
+                    <span class="caret"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#/cssbase/cssbase" >EAdmin Page</a>
+            </li>
+            <li>
+                <a href="#/cssbase/cssbase" >Design Standard</a>
+            </li>
+        </ul>
+
+        <ul class="login-status">
+            <li ng-show="userInfo.username" role="presentation" class="dropdown  navbar-right">
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>

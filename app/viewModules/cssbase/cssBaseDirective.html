@@ -1,0 +1,14 @@
+<div class="box contentPadding"  name="{{currItem.title}}" style="{{currItem.style}}" id="{{currItem.boxId || ''}}">
+    <div class="title-square">{{currItem.title}}</div>
+    <p>{{currItem.depict}}</p>
+    <div class="mt20" ng-repeat="itemH in currItem.html">
+        <div class="mt10" ng-html-container html-data="{{itemH}}"></div>
+        <pre class="code mt15" ng-if="currItem.isCode !== false">{{itemH}}</pre>          
+    </div>
+    <div ng-if="currItem.buttons" class="pt20">
+        <div ng-repeat="itemBtn in currItem.buttons">
+            <button class="btn btn-default" ng-bind="itemBtn.value" ng-click="eval(itemBtn.callback)"></button>
+            <pre class="code" ng-if="item.isCode !== false">{{itemBtn.callback}}</pre>  
+        </div>
+    </div>
+</div>

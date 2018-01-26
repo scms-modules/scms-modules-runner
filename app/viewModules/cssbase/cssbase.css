@@ -1,0 +1,26 @@
+@charset "utf-8";
+.css-ctrl-list{
+	position: fixed;
+	left: 0px;
+	top:100px;
+	
+}
+.css-ctrl-list a{
+	color: #666;
+	display: block;
+	padding:10px 25px;
+}
+.css-ctrl-list a i{
+	margin-right: 15px;
+}
+.css-ctrl-list a:hover{
+	text-decoration: none;
+}
+.code{
+	padding:10px;
+}
+@media (max-width: 767px) {
+	.css-ctrl-list{
+		display: none;
+	}
+}

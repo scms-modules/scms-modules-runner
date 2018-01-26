@@ -1,0 +1,21 @@
+<div ng-controller="cssCtrl">
+    <div class="box contentPadding" ng-repeat="item in data" name="{{item.title}}" style="{{item.style}}" id="{{item.boxId || ''}}">
+        <div class="box-title">{{item.title}}</div>
+        <p>{{item.depict}}</p>
+        <div ng-repeat="itemH in item.html">
+            <div class="mt10" data-ng-bind-html="itemH"></div>
+            <pre class="code" ng-if="item.isCode !== false">{{itemH}}</pre>          
+        </div>
+        <div ng-if="item.buttons" class="pt20">
+            <div ng-repeat="itemBtn in item.buttons">
+                <button class="btn btn-default" ng-bind="itemBtn.value" ng-click="eval(itemBtn.callback)"></button>
+                <pre class="code" ng-if="item.isCode !== false">{{itemBtn.callback}}</pre>  
+            </div>
+        </div>
+    </div>
+    
+
+    <!--<ul class="css-ctrl-list">
+    	<li ng-repeat="item in data" ng-click="open(item.title)"><a href="javascript:void(0);"><i class="fa fa-circle-o"></i>{{item.title}}</a></li>
+    </ul>-->
+</div>

@@ -1,0 +1,7 @@
+.header-ctrl .logo{
+    background: url('./img/logo_icon.svg?asfile') 15px center no-repeat !important;
+}
+.header-ctrl .logo a{
+    text-indent: 30px !important;
+    display: block;
+}
