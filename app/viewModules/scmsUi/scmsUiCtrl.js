@@ -11,9 +11,7 @@ define([
             $scope.navs = [];
             var parentNav = {};
             angular.forEach(demoJson, function(item, index) {
-                if(item.type && item.type !== 'scmsUi') {
-                    return;
-                }
+                
                 $scope.currItem = $scope.currItem || item;
                 if(item.parentTitle) {
                     parentNav[item.parentTitle] = parentNav[item.parentTitle] || {};
@@ -25,7 +23,7 @@ define([
                     });
 
                     parentNav[item.parentTitle].data = {
-                        icon: 'fa fa-cog',
+                        icon: item.type === 'directive' ? 'fa fa-cog': 'fa fa-cog',
                         name: item.parentTitle,
                         item: '',
                         href: '',
@@ -35,7 +33,7 @@ define([
                 }
                 else {
                     $scope.navs.push({
-                        icon: 'fa fa-cog',
+                        icon: item.type === 'directive' ? 'fa fa-cog': 'fa fa-cog',
                         name: item.title,
                         item: item,
                         href: 'javascript:void(0);'
@@ -50,7 +48,7 @@ define([
                 $scope.navs.splice(index, 0, parentNav[key].data);
             }
             $rootScope.navs = [{
-                name: 'Scms UI',
+                name: 'Scms Modules',
                 children: $scope.navs
             }];
 

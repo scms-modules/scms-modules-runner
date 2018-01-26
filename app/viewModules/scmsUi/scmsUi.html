@@ -1,3 +1,4 @@
 <div ng-controller="scmsUiCtrl">
     <div scms-ui-directive curr-item="currItem" ng-if="currItem.type !== 'directive'"></div>
+    <div component-view-directive curr-item="currItem" ng-if="currItem.type === 'directive'"></div>
 </div>
