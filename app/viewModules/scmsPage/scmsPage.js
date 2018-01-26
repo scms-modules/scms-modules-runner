@@ -1,7 +1,7 @@
 import demoJson from 'scmsmodules/demo';
 define([
   './scmsPageCtrl',
-  './scmsPage.css',
+  '../standard/standard.css',
   './scmsPage.html'
 ], function(
   ctrl,
