@@ -4,7 +4,6 @@ let ManifestPlugin = require('webpack-manifest-plugin');
 
 //
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-console.log(555555555555555, __dirname)
 //处理css的loader、plugins
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
