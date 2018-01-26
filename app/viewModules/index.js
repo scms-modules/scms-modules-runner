@@ -1,11 +1,16 @@
 import header from './header/header.js';
-import cssModule from './css/css.js';
 import mainNav from './mainNav/mainNav.js'
-import cssbaseModule from './cssbase/cssbase.js'
+import scmsUi from './scmsUi/scmsUi.js'
+import scmsDirective from './scmsDirective/scmsDirective.js'
+import scmsPage from './scmsPage/scmsPage.js'
+import standard from './standard/standard.js'
 
 module.exports = {
     'viewModules/header/header': header,
-    'viewModules/css/css': cssModule,
-    'viewModules/cssbase/cssbase':cssbaseModule,
-    'viewModules/mainNav/mainNav': mainNav
+    'viewModules/mainNav/mainNav': mainNav,
+    'viewModules/scmsUi/scmsUi': scmsUi,
+    'viewModules/scmsDirective/scmsDirective': scmsDirective,
+    'viewModules/scmsPage/scmsPage': scmsPage,
+    'viewModules/standard/standard': standard
+    
 }

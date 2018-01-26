@@ -60,7 +60,6 @@ angular.module('components', []).config(['$compileProvider', '$controllerProvide
 					try {
 						//var componentFn = require(componentUrl);
 						var componentFn = myModules[componentUrl];
-						console.log(666, componentFn, componentUrl)
 						if(componentFn){
 							componentExec(componentFn);					
 						}else{

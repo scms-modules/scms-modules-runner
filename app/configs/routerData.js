@@ -2,23 +2,23 @@ define(function(angular) {
 	return function(app, elem, attrs, scope) {
 		app.constant('allRouterData', [
 			{
-				'name': 'Base Css',
-				'state': 'css.css',
+				'name': 'Scms UI',
+				'state': 'scmsUi.scmsUi',
 				'moduleName': 'viewModules'
 			},
 			{
-				'name': 'Base Csss',
-				'state': 'cssbase.cssbase',
+				'name': 'Directive',
+				'state': 'scmsDirective.scmsDirective',
 				'moduleName': 'viewModules'
 			},
 			{
-				'name': '管理系统指令',
-				'state': 'directiveModule.directiveModule',
+				'name': 'Scms Page',
+				'state': 'scmsPage.scmsPage',
 				'moduleName': 'viewModules'
 			},
 			{
-				'name': '管理系统指令',
-				'state': 'compile.compile',
+				'name': 'Design Standard',
+				'state': 'standard.standard',
 				'moduleName': 'viewModules'
 			}
 		]);

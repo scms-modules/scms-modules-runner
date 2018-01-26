@@ -8,12 +8,11 @@ define([
             $scope.currentState = '';
 
             if(!$state.current.name) {
-                $location.path('/cssbase/cssbase')
+                $location.path('/scmsUi/scmsUi')
             }
             
             //监听路由发生改变时，按钮选中切换
             $scope.$on('$stateChangeSuccess', function(e,toState,toParams,fromState,fromParams) {
-                
                 $scope.currentState = toState.name;
             });
 

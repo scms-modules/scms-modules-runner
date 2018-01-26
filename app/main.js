@@ -1,10 +1,6 @@
 //main.js 
 
 import '../app/main.css';
-//import './bootstrap/less/bootstrap.less';
-//import './font-awesome/css/font-awesome.css';
-//import 'bootstrap/dist/css/bootstrap.min.css'
-//import 'bootstrap/dist/js/bootstrap.min.js'
 
 //import 'angular';
 import 'angular-ui-router';
