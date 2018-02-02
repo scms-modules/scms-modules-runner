@@ -16,7 +16,14 @@ define(['angular', './scmsUiDirective.html'], function(
                 },
       
                 controller: function($scope, $element, $attrs, $cookies, $timeout) {
-
+                    $scope.eval = function(callback) {
+                        try{
+                            eval(callback);
+                        }
+                        catch(e) {
+                            
+                        }
+                    }
                 }
             }
         }])

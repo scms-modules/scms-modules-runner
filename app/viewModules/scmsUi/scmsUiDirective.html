@@ -6,8 +6,8 @@
         <pre class="code mt15" ng-if="currItem.isCode !== false">{{itemH}}</pre>          
     </div>
     <div ng-if="currItem.buttons" class="pt20">
-        <div ng-repeat="itemBtn in currItem.buttons">
-            <button class="btn btn-default" ng-bind="itemBtn.value" ng-click="eval(itemBtn.callback)"></button>
+        <div ng-repeat="itemBtn in currItem.buttons" class="mb15">
+            <button class="btn btn-default mb10" ng-bind="itemBtn.value" ng-click="eval(itemBtn.callback)"></button>
             <pre class="code" ng-if="item.isCode !== false">{{itemBtn.callback}}</pre>  
         </div>
     </div>
