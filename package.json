@@ -23,7 +23,6 @@
     "bootstrap": "^3.3.7",
     "jquery.cookie": "^1.4.1",
     "jquery.qrcode": "1.0.3",
-    "loadjs": "^3.5.1",
     "lodash": "^4.17.4",
     "ng-sortable": "1.2.2"
   }
