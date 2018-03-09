@@ -12,5 +12,4 @@ module.exports = {
     'viewModules/scmsDirective/scmsDirective': scmsDirective,
     'viewModules/scmsPage/scmsPage': scmsPage,
     'viewModules/standard/standard': standard
-    
 }

@@ -15,8 +15,6 @@ import routerConfigs from './configs/routerConfigs.js';
 import reqInterceptor from './configs/reqInterceptor.js';
 import G from './configs/G.js';
 import routerData from './configs/routerData.js';
-import scmsmodules from 'scmsmodules';
-
 
 var appName = 'App';
 var module = angular.module(appName, [

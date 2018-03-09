@@ -1,4 +1,3 @@
-import loadjs from 'loadjs';
 import myModules from '../viewModules/index.js';
 
 //定义App模块

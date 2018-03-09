@@ -1,10 +1,8 @@
-define(['angular','scmsmodules', './componentDirective.html', './componentDirective.css'], function(
-    angular,
-    scmsmodules,
-    html,
-    css
-  ) {
-    return function(app, elem, attrs, scope) {
+import scmsmodules from 'scmsmodules/index';
+import html from './componentDirective.html';
+import './componentDirective.css';
+
+export default (app, elem, attrs, scope) => {
         var directiveObj = scmsmodules.default || scmsmodules;
         var objKey;
         for(objKey in directiveObj) {
@@ -95,4 +93,3 @@ define(['angular','scmsmodules', './componentDirective.html', './componentDirect
             }
         }])
     }
-  })
